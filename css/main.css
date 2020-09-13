@@ -94,6 +94,10 @@ textarea {
     text-align: center;
   }
 
+  body h2 {
+    /* padding: 40px; */
+  }
+
   h1, h2, h3, h4, h5 {
     font-family: 'Playfair Display', serif;
   }
@@ -101,6 +105,32 @@ textarea {
   h6 {
     margin: 0;
     padding-bottom: 10px;
+  }
+
+  ul, ol {
+    text-align: left;
+    padding: 20px 5px;
+  }
+
+  li {
+    padding: 5px 0;
+  }
+
+  .svg {
+    position: relative;
+  }
+
+  .svg svg {
+    max-width: 450px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
+  .border {
+    border: 1px solid black;
+    margin: 80px;
   }
 
 /* Header */
@@ -145,6 +175,10 @@ textarea {
     justify-content: center;
     min-height: 500px;
     width: 100%;
+  }
+
+  .img .big-idea {
+    /* padding: 0; */
   }
 
   .big-idea {
@@ -195,8 +229,62 @@ textarea {
     border-bottom: 2px solid black;
   }
 
+  #sig {
+    position: relative;
+  }
+
+  #sig h4 {
+
+    z-index: 10;
+    position: relative;
+    padding-top: 10px;
+  }
+
+  #sig svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+
   #first-img {
-    background-image: url('../img/greg-rakozy-unsplash.jpg')
+    background-image: url('../img/greg-rakozy-unsplash.jpg');
+  }
+
+  #second-img {
+    background-image: url('../img/rachel-coyne-unsplash.jpg');
+    width: 100%:
+  }
+
+  .white {
+    color: white;
+  }
+
+  #phone-img {
+    background-image: url('../img/mike-meyers-unsplash.jpg');
+  }
+
+  #pbj-img {
+    background-image: url('../img/corleto-peanut-butter-unsplash.jpg');
+  }
+
+  #pbj2-img {
+    background-image: url('../img/freddy-g-unsplash.jpg');
+    width: 100%;
+  }
+
+  #pbj2-img .big-idea {
+    background-color: rgba(0,0,0,.50);
+    padding: 20px;
+    margin: 20px;
+  }
+
+  #cat-img {
+    background-image: url('../img/anton-lochov-unsplash.jpg')
+  }
+
+  #flowchart {
+    background-image: url('../img/usgs-unsplash.jpg')
   }
 
   /* .border-bottom {
@@ -345,6 +433,10 @@ textarea {
     width: 50%;
   }
 
+  .wide {
+    width: 90%;
+  }
+
   .big-idea h2 {
     padding-bottom: 5px;
     margin: 0;
@@ -370,6 +462,9 @@ textarea {
     min-width: 28%;
   }
 
+  #second-img {
+    width: 100%;
+  }
 
 }
 
@@ -384,6 +479,12 @@ textarea {
   h2 {
     font-size: 2em;
   }
+
+  .wide {
+    padding: 0;
+    margin: 0;
+  }
+
 
   /* Header */
 
