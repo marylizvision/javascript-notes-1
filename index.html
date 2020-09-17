@@ -216,7 +216,7 @@
         </div>
 
         <div id="pbj2-img" class="img">
-          <section class="big-idea wide white">
+          <section class="big-idea wide white opaque">
               <h2>Pattern Recognition</h2>
               <p>First, let's look for some patterns. Are there any aspects of the list of actions we made that are repetitive?</p>
               <p>Yup! Opening the peanut putter jar and jelly jar, and spreading the peanut butter and spreading the jelly.</p>
@@ -324,21 +324,248 @@
           <section class="big-idea svg">
               <h2>Flowcharts</h2>
               <p>Flowcharts are a great way to plot out algorithms, especially if it needs to output different results along the way. And they often use a standard set of styling conventions:</p>
-              <p>A <strong>start/stop</strong> to mark the start and stop of the algorithm.</p>
+              <p>A <strong>start/stop</strong> to mark the start and stop of the algorithm which is a <em>rounded rectangle</em>.</p>
+              <p><strong>Process block</strong> for an instruction or command which is a <em>rectangle</em>.</p>
+              <p>A <strong>decision diamond</strong> for either a yes or no, which is a <em>diamond.</em></p>
+              <p>An <strong>input/output parallelogram</strong> for either input the computer receives or output the computer provides.</p>
+              <p><strong>Circles</strong> to connect one point in the algorithm to another, if needed. (If theres a connection point or turn that needs to be made in order to show it's bypassing or connecting to another point.)</p>
+              <p><strong>Arrows</strong> indicate the way the algorithm flows.</p>
+              <p>Whether you're making your flowchart in a computer or by hand, using these conventions will help to communicate what's happening at each stage.</p>
+              <h4>Translating from logical statements into a flowchart</h4>
+              <p>Here's an example of a logical statement followed by its flowchart translation:</p>
+              <ul>
+                  <li>IF you want to adopt a pet, THEN go to a local shelter.</li>
+                  <li>IF you meet your animal soul mate at the shelter, THEN adopt her!</li>
+                  <li>ELSE go home.</li>
+              </ul>
           </section>
-          <div id="flowchart" class="img">
+          <div id="flow" class="img">
+          </div>
+        </div>
+
+        <div class="screen-split">
+          <div id="write" class="img">
+          </div>
+          <section class="big-idea svg">
+              <h2>Pseudocode</h2>
+              <p>Pseudocode is a pay of simplifying your instructions so that they read more like code. It's a middleground to help you understand the problem better and the way you can go about solving it. Of course, pseudocode won't work on a computer, but it helps guide you towards that.</p>
+              <ul>
+                  <li>There is no 100% right way to write pseudocode</li>
+                  <li>There are no hard and fast rules so just keep doing the thing and it'll work out!</li>
+              </ul>
+              <p>Although you can pretty much write whatever you want, here are a few keywords you should be using:</p>
+              <ul>
+                  <li>IF - THEN - ELSE: These are all keywords you are already using! And the purpose of these keywords is to indicate an if/then/else statement.</li>
+                  <li>INPUT: is for data a user or another source will be giving to the computer.</li>
+                  <li>OUTPUT: is used to indicate the end result of a series of commands.</li>
+              </ul>
+              <p>And why use these keywords? Because they are very similar to the types of keywords you'll use when you write code.</p>
+          </section>
+        </div>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Pseudocode &amp; Variables</h2>
+              <p>Variables are stand-ins for some value, just like they were in algebra in school: <em>x = y + 8, if y = 2, solve for x</em></p>
+              <p>But unlike algebra where the answer is always a number, in programming variables can be different things - like words or even chunks of code.</p>
+              <p>Also, unlike algebra, in programming, the value of variables can change depending on where you are in the script. They may start as one value, and end up a totally different value later!</p>
+              <p>Let's say you're making a clock, and you need a variable for the current time of day. The value is changing constantly! But the variable remains the same.</p>
+              <p>Now let's look at a variation of our LOLCat clock and try writing it out in pseudocode:</p>
+              <div class="code">
+                  <p>INPUT computer finds out what time it is</p>
+                  <p>STORE time in the TIME variable</p>
+                  <p>IF TIME &lt; 12pm
+                  <p class="indent-40">OUTPUT message: &quot;Good morning!!&quot;</p>
+                  <p>ELSE</p>
+                  <p class="indent-40">OUTPUT message: &quot;Good day!&quot;</p>
+              </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Pseudocode Terms</h2>
+              <p>We may not understand what all of these terms mean right now, but just think about how you might use them as they will help us translate our pseudocode into JavaScript.</p>
+              <h4>STOP/END</h4>
+                  <p>The first thing you need to know is that you need to tell your computer when a statement or instruction is done. Similar to when you stick in a period or make a new paragraph - computers are so literal that you have to spell it out for them. Which means that if you create a loop or a function or an if/else statement you have to tell the computer when that statement is DONE. And you do that by writing either STOP or END. Whichever one works for you!</p>
+              <h4>IF/THEN/ELSE</h4>
+                  <p>Computers often think in terms of &quot;if x happens, then do y, if not do Z.&quot; In pseudocode, you represent this idea using IF, THEN, ELSE.</p>
+                  <div class="code">
+                      <p>IF time is known THEN</p>
+                      <p class="indent-40">OUTPUT message: &quot;Good day, mate!&quot;</p>
+                      <p>ELSE</p>
+                      <p class="indent-40">OUTPUT &quot;I'm not sure what time it is. Good day anyway!&quot;</p>
+                      <p>STOP</p>
+                  </div>
+              <h4>INPUT/OUTPUT</h4>
+                  <p>It's not uncommon for some parts of code to require an input in order to run, and to create an output as a result. This idea comes up a lot in writing functions, something you'll be doing all the time in JavaScript. You can express inputs and outputs in pseudocode like this:</p>
+                  <div class="code">
+                      <p>INPUT time</p>
+                      <p class="indent-20">IF time is known</p>
+                      <p class="indent-40">IF time is before noon THEN</p>
+                      <p class="indent-80">OUTPUT message: &quot;Good morning!&quot;</p>
+                      <p class="indent-40">ELSE IF time is after evening THEN</p>
+                      <p class="indent-80">OUTPUT message: &quot;Good evening!&quot;</p>
+                      <p class="indent-40">ELSE</p>
+                      <p class="indent-80">OUTPUT message: &quot;Good afternoon!&quot;</p>
+                      <p class="indent-40">STOP</p>
+                      <p class="indent-20">ELSE</p>
+                      <p class="indent-40">OUTPUT &quot;I'm not sure what time it is. Good day anyway!&quot;</p>
+                      <p class="indent-20">STOP</p>
+                  </div>
+              <h4>STORE/SAVE</h4>
+                  <p>STORE is a pseudocode term that tells your computer when it needs to store or save a value. Let's say you had a form field where you could input your name, and then it would output a message with your name on it. In between inputting and outputting your name, you want to save your name.</p>
+                  <p><em>(I know this seems silly and unnecessary! Why doesn't the computer know to store the value? Well...it doesn't! So make sure to tell it to do it.)</em></p>
+                  <p>The pseudocode for telling the computer to store something would look like this:</p>
+                  <div class="code">
+                      <p>INPUT name &quot;Jane Doesitall&quot;</p>
+                      <p>STORE name</p>
+                      <p>OUTPUT message: &quot;Hello [name]! Welcome to our website!&quot;</p>
+                  </div>
+                  <p>You can also use STORE if you want a certain value to change. Like, say you always have a favorite dress, but which dress is your favorite depends on what season it is. Your pseudocode might look something like this:</p>
+                  <div class="code">
+                      <p>STORE favorite dress</p>
+                      <p>STORE season</p>
+                      <p>IF season IS summer</p>
+                      <p class="indent-40">favorite dress IS blue dress with spaghetti straps</p>
+                      <p>ELSE IF season IS fall</p>
+                      <p class="indent-40">favorite dress IS maroon dress with three-quarter sleeves</p>
+                      <p>ELSE IF season IS winter</p>
+                      <p class="indent-40">favorite dress IS grey sweater dress</p>
+                      <p>ELSE IF season IS spring</p>
+                      <p class="indent-40">favorite dress IS cap-sleeved purple dress</p>
+                      <p>STOP</p>
+                  </div>
+                  <h4>Some notes about indenting</h4>
+                  <p>When writing pseudocode - not to mention JavaScript - you may want to format your lines using indentation.</p>
+                  <p>Indentation helps you to be able to see what's in your pseudocode more clearly. It's not necessary, but it's super helpful - not only for you, but for other people reading your code.</p>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Text vs. Flowcharts vs. Pseudocode</h2>
+              <p><em>Leslie is on her way to work, and she really wants an almond milk latte. She's also doesn’t have a whole lot of extra time, so she makes a plan: she’ll go by her favorite coffee shop, Joe’s, and if they’re too busy, then she’ll swing by her second favorite spot, Mighty Bean. If Mighty bean is too busy, then she’ll just have to suck it up and drink some coffee at the office.</em></p>
+              <p>If we were to plot out this text as instructions, it would look something like this:</p>
+              <ul>
+                  <li>IF Joe's isn't too busy, THEN go on in and get an almond milk Latte.</li>
+                  <li>ELSE go to Mighty Bean
+                      <ul>
+                          <li>IF Mighty Bean isn't too busy, THEN go on in and get an almond milk Latte.
+                              <ul>
+                                 <li>ELSE just go to work and drink some work coffee.</li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+              <p>As a flow chart, it would look something like this:</p>
+              <img src="img/coffeeshop-flowchart-3.png" alt="coffeeshop flowchart">
+              <p>And as pseudocode, it would read like this:</p>
+              <div class="code">
+                  <p class="space-below">START</p>
+                  <p>IF Joe's is not too busy THEN</p>
+                  <p class="indent-40">Go to Joe's</p>
+                  <p class="indent-40">OUTPUT Get an almond milk latte from Joe's!</p>
+                  <p>ELSE IF Joe's is too busy THEN</p>
+                  <p class="indent-40">Go to Mighty Bean.</p>
+                  <p class="indent-40">IF Mighty Bean isn't too busy THEN</p>
+                  <p class="indent-80">OUTPUT Get an almond latte.</p>
+                  <p class="indent-40">ELSE</p>
+                  <p class="indent-80">Go to work</p>
+                  <p class="indent-80">OUTPUT drink work coffee.</p>
+                  <p class="space-above">STOP</p>
+              </div>
+              <p>There are some key things to notice here:</p>
+              <ul>
+                  <li>The pseudocode is super similar to the instructions! It's just a little more condensed and codey.</li>
+                  <li>Pseudocode, like flowcharts, often begins with a start and ends with a stop.</li>
+                  <li>Pseudocode, like actual code, also uses indentation to keep it all straight.</li>
+              </ul>
+              <p>Of course, you can write your pseudocode however you want! These are just some guidelines you can use to help keep your concepts straight.</p>
+              <h4>Pseudocode &amp; Variables</h4>
+              <p>There's one more thing to mention here: what if this pseudocode was using variables?</p>
+              <p>There are two items in the above pseudocode that could be expressed as variables:</p>
+              <ul>
+                  <li>The coffee shop</li>
+                  <li>The beverage</li>
+              </ul>
+              <p>The value for each of these changes depending on what stage you're at in the process.</p>
+              <p>Here's the same pseudocode as above, only now with our two variables:</p>
+              <div class="code">
+                  <p>STORE coffeeshop.</p>
+                  <p>STORE beverage AS &quot;almond milk latte&quot;.</p>
+                  <p class="space-above space-below">START</p>
+                  <p>coffeeshop = Joe's.</p>
+                  <p>IF coffeeshop is not too busy THEN</p>
+                  <p class="indent-40">Go to coffeeshop.</p>
+                  <p class="indent-40 space-below">OUTPUT Get a beverage from coffeeshop!</p>
+                  <p>ELSE IF coffeeshop is too busy THEN</p>
+                  <p class="indent-40">coffeeshop = Mighty Bean.</p>
+                  <p class="indent-40">Go to coffeeshop.</p>
+                  <p class="indent-40">IF coffeeshop isn't too busy THEN</p>
+                  <p class="indent-80">OUTPUT Get beverage.</p>
+                  <p class="indent-40">ELSE</p>
+                  <p class="indent-80">Go to work</p>
+                  <p class="indent-80">beverage = &quot;work coffee.&quot;</p>
+                  <p class="indent-80 space-below">OUTPUT get beverage.</p>
+                  <p>STOP</p>
+              </div>
+              <p>The variables are declared at the top using the pseudocode word <strong>STORE</strong>. In one case - <strong>coffeeshop</strong> - the value isn't assigned until the instructions get going. <strong>beverage</strong>, however, has been assigned the value &quot;almond milk latte&quot; - a value retains until almost the end of the code.</p>
+              <p>It may feel silly to declare variables like this, but next week you'll be writing real JavaScript. And then, you'll really have to!</p>
+            </div>
+        </section>
+
+        <div class="screen-split">
+          <section class="big-idea svg">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#C9D6DB" d="M51.1,-54.7C61.2,-52.4,61,-31.5,64.4,-11.4C67.9,8.7,75,28,66.6,34.6C58.2,41.2,34.4,35,19.5,30.4C4.6,25.8,-1.3,22.8,-9.9,21.9C-18.6,21.1,-30,22.5,-39.7,17.3C-49.4,12.1,-57.5,0.3,-55.4,-9.4C-53.3,-19.1,-41,-26.7,-30.1,-28.9C-19.2,-31,-9.6,-27.8,5.4,-34.3C20.5,-40.8,41,-57,51.1,-54.7Z" transform="translate(100 100)" />
+              </svg>
+              <h2>Objects</h2>
+              <p>An object can be anything - a dog, a candy bar, a house. What we use to identify that thing are its <strong>properties</strong>.</p>
+              <p>A House, for example, usually has properties like:</p>
+              <ul>
+                  <li>An exterior</li>
+                  <li>A roof</li>
+                  <li>Number of stories</li>
+                  <li>Number of bedrooms</li>
+                  <li>Number of bathrooms</li>
+                  <li>Number of other rooms</li>
+              </ul>
+              <p>And so on.</p>
+              <p>(Of course actual houses have a lot more properties than this, but we're abstracting here!)</p>
+              <p>As many properties as houses generally share, many of them are quite different! Some are single story, some are multi-story, some are wood, some are brick. But as many variations as there are, we still understand the concept of a house and the properties it <em>usually</em> has. So like, there are usually always, bedrooms, bathrooms, a roof, an exterior etc. But there can be more of course.</p>
+          </section>
+          <div id="home-objects" class="img">
           </div>
         </div>
 
         <section class="notes">
             <div class="main-idea">
-              <h2></h2>
-              <p></p>
+              <h2>Objects, Properties and Values</h2>
+              <p>Objects in JavaScript work in a similar way. You could have an object for a political candidate in an election, who could have properties like name and number of votes. The <strong>values</strong> for those properties may change based on who the candidate is, but the candidate object remains the same.</p>
+              <p>Political candidate Robin (<strong>property</strong> = name <strong>Value</strong> = Robin) 50 votes (<strong>Property</strong> = votes <strong>Value</strong> = 50)</p>
+              <p>Let's say you were to write out a house object in pseudocode. It could look something like this:</p>
+              <div class="code">
+                  <p>OBJECT House</p>
+                  <div class="indent-40">
+                      <p>PROPERTY exterior</p>
+                      <p>PROPERTY paint color</p>
+                      <p>PROPERTY roof</p>
+                      <p>PROPERTY stories</p>
+                      <p>PROPERTY bedrooms</p>
+                      <p>PROPERTY bathrooms</p>
+                      <p>PROPERTY other rooms</p>
+                  </div>
+              </div>
+              <p>When you call a new instance of that object, you can give it new values - like the kind of exterior, the kind of roof, the number of stories, and the number of different kinds of stories.</p>
+              <p>Next up, you'll get some more practice indentifying properties!</p>
             </div>
         </section>
 
+<!--- TEMPLATES -------->
 
 
+<!-- TITLE SECTION - IMAGE RIGHT -->
         <div class="screen-split">
           <section class="big-idea svg">
               <h2></h2>
@@ -348,7 +575,93 @@
           </div>
         </div>
 
+<!-- TITLE SECTION - IMAGE LEFT -->
 
+        <div class="screen-split">
+          <div id="" class="img">
+          </div>
+          <section class="big-idea svg">
+              <h2></h2>
+              <p></p>
+          </section>
+        </div>
+
+<!-- TEXT OVER BIG IMAGE -->
+        <div id="" class="img">
+          <section class="big-idea white wide">
+              <h2></h2>
+              <p></p>
+          </section>
+        </div>
+
+<!-- TEXT OVER BIG IMAGE WITH OPAQUE BLACK -->
+
+        <div id="" class="img">
+          <section class="big-idea white wide opaque">
+              <h2></h2>
+              <p></p>
+          </section>
+        </div>
+
+<!-- NOTES - ONE SECTION -->
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+        </section>
+
+<!-- NOTES - TWO SECTIONS -->
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+        </section>
+
+<!-- NOTES - THREE SECTIONS -->
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+        </section>
+
+<!-- NOTES - FOUR SECTIONS -->
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+            <div class="main-idea">
+              <h2></h2>
+              <p></p>
+            </div>
+        </section>
 
 
 

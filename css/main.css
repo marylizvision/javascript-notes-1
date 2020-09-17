@@ -133,6 +133,43 @@ textarea {
     margin: 80px;
   }
 
+  .code {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .code p {
+    margin: 0;
+    text-align: left;
+  }
+
+  .code .indent-20 {
+    padding-left: 20px;
+  }
+
+  .code .indent-40 {
+    padding-left: 40px;
+  }
+
+  .code .indent-80 {
+    padding-left: 80px;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .space-below {
+    padding-bottom: 1em;
+  }
+
+  .space-above {
+    padding-top: 1em;
+  }
+
 /* Header */
 
   header {
@@ -214,7 +251,7 @@ textarea {
   }
 
   .notes .main-idea {
-    align-items: flex-start;
+    align-items: center;
     border-style: double;
     display: flex;
     justify-content: center;
@@ -247,6 +284,18 @@ textarea {
     z-index: -1;
   }
 
+  /* Images */
+
+  .white {
+    color: white;
+  }
+
+  .opaque {
+    background-color: rgba(0,0,0,.50);
+    padding: 20px;
+    margin: 20px;
+  }
+
   #first-img {
     background-image: url('../img/greg-rakozy-unsplash.jpg');
   }
@@ -254,10 +303,6 @@ textarea {
   #second-img {
     background-image: url('../img/rachel-coyne-unsplash.jpg');
     width: 100%:
-  }
-
-  .white {
-    color: white;
   }
 
   #phone-img {
@@ -273,18 +318,20 @@ textarea {
     width: 100%;
   }
 
-  #pbj2-img .big-idea {
-    background-color: rgba(0,0,0,.50);
-    padding: 20px;
-    margin: 20px;
-  }
-
   #cat-img {
     background-image: url('../img/anton-lochov-unsplash.jpg')
   }
 
-  #flowchart {
+  #flow {
     background-image: url('../img/usgs-unsplash.jpg')
+  }
+
+  #write {
+    background-image: url('../img/hannah-grace-unsplash.jpg')
+  }
+
+  #home-objects {
+    background-image: url('../img/minh-pham-unsplash.jpg')
   }
 
   /* .border-bottom {
@@ -455,10 +502,11 @@ textarea {
   }
 
   .notes .main-idea {
-    align-items: flex-start;
+    align-items: center;
     min-height: 500px;
     flex: 1;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
+    justify-content: center;
     min-width: 28%;
   }
 
