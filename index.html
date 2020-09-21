@@ -348,7 +348,7 @@
           </div>
           <section class="big-idea svg">
               <h2>Pseudocode</h2>
-              <p>Pseudocode is a pay of simplifying your instructions so that they read more like code. It's a middleground to help you understand the problem better and the way you can go about solving it. Of course, pseudocode won't work on a computer, but it helps guide you towards that.</p>
+              <p>Pseudocode is a way of simplifying your instructions so that they read more like code. It's a middleground to help you understand the problem better and the way you can go about solving it. Of course, pseudocode won't work on a computer, but it helps guide you towards that.</p>
               <ul>
                   <li>There is no 100% right way to write pseudocode</li>
                   <li>There are no hard and fast rules so just keep doing the thing and it'll work out!</li>
@@ -414,7 +414,6 @@
                   </div>
               <h4>STORE/SAVE</h4>
                   <p>STORE is a pseudocode term that tells your computer when it needs to store or save a value. Let's say you had a form field where you could input your name, and then it would output a message with your name on it. In between inputting and outputting your name, you want to save your name.</p>
-                  <p><em>(I know this seems silly and unnecessary! Why doesn't the computer know to store the value? Well...it doesn't! So make sure to tell it to do it.)</em></p>
                   <p>The pseudocode for telling the computer to store something would look like this:</p>
                   <div class="code">
                       <p>INPUT name &quot;Jane Doesitall&quot;</p>
@@ -543,7 +542,7 @@
             <div class="main-idea">
               <h2>Objects, Properties and Values</h2>
               <p>Objects in JavaScript work in a similar way. You could have an object for a political candidate in an election, who could have properties like name and number of votes. The <strong>values</strong> for those properties may change based on who the candidate is, but the candidate object remains the same.</p>
-              <p>Political candidate Robin (<strong>property</strong> = name <strong>Value</strong> = Robin) 50 votes (<strong>Property</strong> = votes <strong>Value</strong> = 50)</p>
+              <p>Political candidate Robin (<strong>Object</strong> = Political Candidate <strong>Property</strong> = name <strong>Value</strong> = Robin) 50 votes (<strong>Property</strong> = votes <strong>Value</strong> = 50)</p>
               <p>Let's say you were to write out a house object in pseudocode. It could look something like this:</p>
               <div class="code">
                   <p>OBJECT House</p>
@@ -558,9 +557,295 @@
                   </div>
               </div>
               <p>When you call a new instance of that object, you can give it new values - like the kind of exterior, the kind of roof, the number of stories, and the number of different kinds of stories.</p>
-              <p>Next up, you'll get some more practice indentifying properties!</p>
             </div>
         </section>
+
+        <div class="screen-split">
+          <div id="functions" class="img">
+          </div>
+          <section class="big-idea svg">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#E0B576" d="M33.4,-50.4C46,-50.7,60.6,-47,69.3,-38C78.1,-28.9,81,-14.5,75.1,-3.4C69.2,7.7,54.6,15.4,45.7,24.3C36.9,33.2,33.9,43.3,27.2,49.9C20.5,56.4,10.3,59.5,-0.1,59.7C-10.5,59.9,-21,57.2,-32.4,53.4C-43.8,49.5,-56,44.5,-65.7,35.4C-75.3,26.3,-82.3,13.1,-81.9,0.2C-81.5,-12.7,-73.7,-25.3,-65.5,-37C-57.4,-48.7,-48.9,-59.4,-37.9,-60C-27,-60.7,-13.5,-51.5,-1.5,-48.8C10.4,-46.2,20.9,-50.2,33.4,-50.4Z" transform="translate(100 100)" />
+          </svg>
+              <h2>Functions, Inputs and Outputs</h2>
+              <p>Functions are like mini algorithms that exist within your larger algorithim.</p>
+              <p>The purpose of a function is to group related actions into little bundles, so you can both organize your code and repourpose it.</p>
+              <p>To write out a function, start with the function keyword and follow it by the name of your function. For example, if I were explaining to the computer howt to spread peanut butter I would write:</p>
+              <div class="code">
+                  <p class="indent-40">FUNCTION spread</p>
+                  <p class="indent-40">take knife</p>
+                  <p class="indent-40">dip into peanut butter</p>
+                  <p class="indent-40">grab bread</p>
+                  <p class="indent-40">place knife with peanut butter on the bread</p>
+                  <p class="indent-40">move knife back and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>Then, any time I need to read the function, I'll just write:</p>
+              <div class="code">
+                  <p>RUN FUNCTION spread</p>
+              </div>
+              <h4>There are a couple of challenges we still need to solve, though:</h4>
+              <ol>
+                  <li>Our function only works with peanut butter, which won't work if I need to spread some jelly, and</li>
+                  <li>It requires both peanut butter and bread in order to work</li>
+              </ol>
+          </section>
+        </div>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Inputs</h2>
+              <p>Sometimes functions need inputs in order to work. An input for a function is called a <strong>parameter</strong>.</p>
+              <p>If your function requires parameters, then you need to let the computer know. In this instance, the spread function requires both bread and something spreadable, like peanut butter. So I'll write that out by the name of the function:</p>
+              <div class="code">
+                  <p>FUNCTION spread WITH bread &amp; peanut butter</p>
+                  <p class="indent-40">take knife</p>
+                  <p class="indent-40">dip into peanut butter</p>
+                  <p class="indent-40">grab bread</p>
+                  <p class="indent-40">place knife with peanut butter on the bread</p>
+                  <p class="indent-40">move knife backwards and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>Now we've fixed the first issue, but it still only works for peanut butter.</p>
+              <p>To make this function spread agnostic, we'll replace the &quot;peanut butter&quot; with the term &quot;breadspread&quot;:</p>
+              <div class="code">
+                  <p>FUNCTION spread WITH bread &amp; breadspread</p>
+                  <p class="indent-40">take knife</p>
+                  <p class="indent-40">dip into peanut butter</p>
+                  <p class="indent-40">grab bread</p>
+                  <p class="indent-40">place knife with peanut butter on the bread</p>
+                  <p class="indent-40">move knife backwards and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>&quot;Breadspread&quot; now works as a variable in our function called &quot;spread.&quot;</p>
+              <p>so NOW, if I want the computer to spread some jelly, I'll tell the computer that &quot;breadspread&quot; is equal to jelly before calling the &quot;spread&quot; function:</p>
+              <p>And then this way you can change the breadspread variable to any type of spread you'd like:</p>
+              <div class="code">
+                  <p>breadspread = nutella</p>
+                  <p>breadspread = butter</p>
+                  <p>breadspread = vegan butter</p>
+                  <p>breadspread = hummus</p>
+              </div>
+              <p>And no matter what, the computer will know what to do!</p>
+            </div>
+            <div class="main-idea">
+              <h2>Outputs</h2>
+              <p>In addition to having INPUTS, sometimes functions have OUTPUTS. OUTPUTS are what the fuction returns to you when it's done running.</p>
+              <p>In this bread spreading example, you'd expect it to hand you a piece of bread with some spread on it, right?</p>
+              <p>But remember that computers don't know anything. So if you want it to give you some bread and bread spread, you have to specify it!</p>
+              <p>That's called an OUTPUT, which you can specify using the OUTPUT or RETURN keyword:</p>
+              <div class="code">
+                  <p>FUNCTION spread with bread &amp; breadspread</p>
+                  <p class="indent-40">take knife</p>
+                  <p class="indent-40">dip into breadspread</p>
+                  <p class="indent-40">grab bread</p>
+                  <p class="indent-40">place knife with breadspread on the bread</p>
+                  <p class="indent-40">move knife backwards and forwards so that breadspread is transferred to the bread</p>
+                  <p class="indent-40">RETURN bread with breadspread</p>
+              </div>
+              <p>Now you've got some bread and bread spread!</p>
+              <h4>When functions are a part of an object, they have a special name: <strong>Methods.</strong></h4>
+              <p>Like those spreading instructions? If they're part of a peanut butter and jelly sandwich object, then they're a method. A method works like a function, but it's a property of an object. That's why they get a special name.</p>
+              <p>And just like functions, you have to call them to make them work.</p>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Example Function: House Object</h2>
+              <p>Functions often require inputs and produce outputs.</p>
+              <p>We actually learned a little bit about this when we worked on creating our peanut butter and jelly sandwich instructions:</p>
+              <ul>
+                  <li>The instructions for spreading peanut butter and jelly is a <strong>function</strong></li>
+                  <li>Peanut butter and jelly are our <strong>inputs</strong> (also known as <strong>parameters</strong> (which is an <strong>input</strong> which is a <strong>variable</strong> which holds a <strong>value</strong>))</li>
+                  <li>The output was a piece of bread with peanut butter or jelly on it.</li>
+              </ul>
+              <p>The same way of thinking can apply to all different kinds of objects, like the House object we've been practicing with.</p>
+            </div>
+        </section>
+
+
+        <div id="pseudo" class="img">
+          <section class="big-idea white wide opaque">
+              <h2>Pseudocode Recap: Terms So Far</h2>
+              <h4>Variables</h4>
+              <p>Variables are stand-ins for some value (words, numbers, or chunks of code) like in algebra: x = y + 8, if y = 2, solve for x</p>
+              <p>With a clock, the <strong>value</strong> of the variable could change, but the variable would stay the same, making it easier to call out in code.</p>
+              <div class="code-white">
+                  <p>INPUT computer finds out what time it is</p>
+                  <p>STORE time in the TIME variable</p>
+                  <p>IF TIME &lt; 12pm
+                  <p class="indent-40">OUTPUT message: &quot;Good morning!!&quot;</p>
+                  <p>ELSE</p>
+                  <p class="indent-40">OUTPUT message: &quot;Good day!&quot;</p>
+              </div>
+              <h4>STOP/END</h4>
+              <p>Obvious, but just make sure you put START at the beginning, and STOP at the end. Theeannks </p>
+              <h4>IF/THEN/ELSE</h4>
+              <p>IF x happens, THEN do y, ELSE (if not/otherwise) do z.</p>
+              <h4>INPUT/OUTPUT</h4>
+              <p>It's common to need to input information in order for code to run, and for something (output) to return.</p>
+              <div class="code-white">
+                  <p>INPUT time</p>
+                  <p class="indent-20">IF time is known</p>
+                  <p class="indent-40">IF time is before noon THEN</p>
+                  <p class="indent-80">OUTPUT message: &quot;Good morning!&quot;</p>
+                  <p class="indent-40">ELSE IF time is after evening THEN</p>
+                  <p class="indent-80">OUTPUT message: &quot;Good evening!&quot;</p>
+                  <p class="indent-40">ELSE</p>
+                  <p class="indent-80">OUTPUT message: &quot;Good afternoon!&quot;</p>
+                  <p class="indent-40">STOP</p>
+                  <p class="indent-20">ELSE</p>
+                  <p class="indent-40">OUTPUT &quot;I'm not sure what time it is. Good day anyway!&quot;</p>
+                  <p class="indent-20">STOP</p>
+              </div>
+              <h4>STORE/SAVE</h4>
+              <p>STORE tells your computer when it needs to store or save a value for a variable, like a name:</p>
+              <div class="code-white">
+                  <p>INPUT name &quot;Jane Doesitall&quot;</p>
+                  <p>STORE name</p>
+                  <p>OUTPUT message: &quot;Hello [name]! Welcome to our website!&quot;</p>
+              </div>
+              <p>You can also use STORE if you want a certain value for a variable to change. Like, say you always have a favorite dress, but which dress is your favorite depends on what season it is. Below, <strong>favorite dress</strong> &amp; <strong>season</strong> are both variables with changing values. Your pseudocode might look something like this:</p>
+              <div class="code-white">
+                  <p>STORE favorite dress</p>
+                  <p>STORE season</p>
+                  <p>IF season IS summer</p>
+                  <p class="indent-40">favorite dress IS blue dress with spaghetti straps</p>
+                  <p>ELSE IF season IS fall</p>
+                  <p class="indent-40">favorite dress IS maroon dress with three-quarter sleeves</p>
+                  <p>ELSE IF season IS winter</p>
+                  <p class="indent-40">favorite dress IS grey sweater dress</p>
+                  <p>ELSE IF season IS spring</p>
+                  <p class="indent-40">favorite dress IS cap-sleeved purple dress</p>
+                  <p>STOP</p>
+              </div>
+              <p>Another previous example. Here, <strong>coffeeshop</strong> is one variable with a value that changes, and <strong>beverage</strong> is another variable with a value that stays the same.</p>
+              <div class="code-white">
+                  <p>STORE coffeeshop.</p>
+                  <p>STORE beverage AS &quot;almond milk latte&quot;.</p>
+                  <p class="space-above space-below">START</p>
+                  <p>coffeeshop = Joe's.</p>
+                  <p>IF coffeeshop is not too busy THEN</p>
+                  <p class="indent-40">Go to coffeeshop.</p>
+                  <p class="indent-40 space-below">OUTPUT Get a beverage from coffeeshop!</p>
+                  <p>ELSE IF coffeeshop is too busy THEN</p>
+                  <p class="indent-40">coffeeshop = Mighty Bean.</p>
+                  <p class="indent-40">Go to coffeeshop.</p>
+                  <p class="indent-40">IF coffeeshop isn't too busy THEN</p>
+                  <p class="indent-80">OUTPUT Get beverage.</p>
+                  <p class="indent-40">ELSE</p>
+                  <p class="indent-80">Go to work</p>
+                  <p class="indent-80">beverage = &quot;work coffee.&quot;</p>
+                  <p class="indent-80 space-below">OUTPUT get beverage.</p>
+                  <p>STOP</p>
+              </div>
+              <h4>OBJECT</h4>
+              <p>You could have an object for a political candidate in an election who could have properties like name and number of votes. The <strong>values</strong> for those properties may change based on who the candidate is, but the candidate object remains the same.</p>
+              <p>Political candidate Robin (<strong>Object</strong> = Political Candidate <strong>Property</strong> = name <strong>Value</strong> = Robin) 50 votes (<strong>Property</strong> = votes <strong>Value</strong> = 50)</p>
+              <p>A house object could look like this:</p>
+              <div class="code-white">
+                  <p>OBJECT House</p>
+                  <div class="indent-40">
+                      <p>PROPERTY exterior</p>
+                      <p>PROPERTY paint color</p>
+                      <p>PROPERTY roof</p>
+                      <p>PROPERTY stories</p>
+                      <p>PROPERTY bedrooms</p>
+                      <p>PROPERTY bathrooms</p>
+                      <p>PROPERTY other rooms</p>
+                  </div>
+              </div>
+              <p>The house (<strong>object</strong>) could have a paint color (<strong>property</strong>) that's blue (<strong>value</strong>)</p>
+              <h4>Functions</h4>
+              <p>Functions are like mini algorithms that exist within your larger algorithim.</p>
+              <p>This allows you to repurpose your code.</p>
+              <div class="code-white">
+                <p class="indent-40">FUNCTION spread</p>
+                <p class="indent-40">take knife</p>
+                <p class="indent-40">dip into peanut butter</p>
+                <p class="indent-40">grab bread</p>
+                <p class="indent-40">place knife with peanut butter on the bread</p>
+                <p class="indent-40">move knife back and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>Then, anytime I need to run the function, I'll write:</p>
+              <div class="code">
+                  <p>RUN FUNCTION spread</p>
+              </div>
+              <p>However, this only works with peanut butter - we need it to work with bread and also other spreads, like jelly.</p>
+              <h4>Parameter</h4>
+              <p>An <strong>input</strong> for a function is called a <strong>parameter.</strong></p>
+              <p>So...it is the input (that contains a variable (that contains a value)) for the mini algorithim within your algorithim.</p>
+              <p>If your function requires parameters (i.e. inputs which are values, or variables that house values), you need to let the computer know by saying what your parameter (Input>Variable>Value) is next to the name of the function:</p>
+              <div class="code-white">
+                    <p>FUNCTION spread WITH bread &amp; peanut butter</p>
+                    <p class="indent-40">take knife</p>
+                    <p class="indent-40">dip into peanut butter</p>
+                    <p class="indent-40">grab bread</p>
+                    <p class="indent-40">place knife with peanut butter on the bread</p>
+                    <p class="indent-40">move knife backwards and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>Now we need to make this work for more than just peanut butter! We'll do that by making a <strong>variable</strong> (with a changeable <strong>value</strong> that could be peanut butter or jelly or anything else)</p>
+              <p>To make this FUNCTION (a mini algorithm within the larger algorithm) spread more agnostic (interchangable?) we'll replace the &quot;peanut butter&quot; value with the term/variable &quot;breadspread&quot;:</p>
+              <div class="code-white">
+                <p>FUNCTION spread WITH bread &amp; breadspread</p>
+                <p class="indent-40">take knife</p>
+                <p class="indent-40">dip into peanut butter</p>
+                <p class="indent-40">grab bread</p>
+                <p class="indent-40">place knife with peanut butter on the bread</p>
+                <p class="indent-40">move knife backwards and forwards so that peanut butter is transferred to the bread</p>
+              </div>
+              <p>This will allow us to use different values for the breadspread variable!</p>
+              <h4>OUTPUT/RETURN</h4>
+              <p>We have to tell the computer what we want returned to us, otherwise it will run and not give anything back.</p>
+              <div class="code-white">
+                <p>FUNCTION spread WITH bread &amp; breadspread</p>
+                <p class="indent-40">take knife</p>
+                <p class="indent-40">dip into peanut butter</p>
+                <p class="indent-40">grab bread</p>
+                <p class="indent-40">place knife with peanut butter on the bread</p>
+                <p class="indent-40">move knife backwards and forwards so that peanut butter is transferred to the bread</p>
+                <p class="indent-40">RETURN bread with breadspread</p>
+              </div>
+              <p>Here, bread is a value as there is only one of it, and breadspread is a variable because it can be interchanged.</p>
+              <div class="code-white">
+                  <p>breadspread = jelly</p>
+                  <p>RUN FUNCTION spread WITH bread &amp; breadspread</p>
+              </div>
+              <h4>METHODS</h4>
+              <p>When <strong>functions</strong> (mini algorithms within a larger algorithm) are apart of an <strong>object</strong> (An object &quot;House&quot; holds properties like &quot;paint color, roof, bedrooms (which are variables, that can hold values)&quot; etc. - Method is on a <strong>property</strong> level. Imagine a drop down menu for the roof with an algorithm/function for how the roof is constructed - instead of calling it a function, it's called a method!), they are called <strong>Methods</strong>.</p>
+              <p>If the FUNCTION spread (the algorithm within the larger sandwich algorithm) is apart of a peanut butter and jelly sandwich object, then they're a <strong>Method</strong>. A method works just like a funtion, but it's a <strong>property</strong> of an <strong>object</strong>.</p>
+              <ul>
+                  <li>Peanut Butter &amp; Jelly Sandwich (<strong>Object</strong>)
+                      <ul>
+                          <li>color (PROPERTY/VARIABLE (that could hold a VALUE))</li>
+                          <li>weight (PROPERTY/VARIABLE (that could hold a VALUE))</li>
+                          <li>FUNCTION spread (METHOD - otherwise a FUNCTION if it was on it's own)
+                              <ul>
+                                  <li>take knife</li>
+                                  <li>dip into peanut butter</li>
+                                  <li>grab bread</li>
+                                  <li>place knife with peanutbutter on the bread</li>
+                                  <li>move knife backwards and forwards so that peanut butter is transferred to the bread</li>
+                                  <li>RETURN bread with breadspread</li>
+                              </ul>
+                          </li>
+                          <li>FUNCTION construct (METHOD)
+                              <ul>
+                                  <li>...</li>
+                              </ul>
+                          </li>
+                          <li>FUNCTION clean up (METHOD)
+                            <ul>
+                                <li>...</li>
+                            </ul>
+                          </li>
+                      </ul>
+                  </li>
+              </ul>
+              <p>And just like functions, you have to call on them to get them to work.</p>
+              <p>Soooo I guess an object can/is technically a holder of algorithms? We shall seeee</p>
+          </section>
+        </div>
+
+
 
 <!--- TEMPLATES -------->
 
