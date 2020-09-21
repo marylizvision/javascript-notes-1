@@ -845,6 +845,96 @@
           </section>
         </div>
 
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Example House Object Function</h2>
+              <p>This same way of thinking can apply to all different kinds of objects, like the house object example.</p>
+              <div class="code">
+                  <p>OBJECT House</p>
+                  <p class="indent-40">PROPERTY exterior</p>
+                  <p class="indent-40">PROPERTY paint color</p>
+                  <p class="indent-40">PROPERTY roof</p>
+                  <p class="indent-40">PROPERTY stories</p>
+                  <p class="indent-40">PROPERTY bedrooms</p>
+                  <p class="indent-40">PROPERTY bathrooms</p>
+                  <p class="indent-40">PROPERTY other rooms</p>
+              </div>
+              <p>Now say that you wanted to make a function for weatherproofing the exterior of the house using pseudocode. You might write something like this:</p>
+              <div class="code">
+                  <p>FUNCTION</p>
+                  <p class="indent-40">INPUT house, house exterior, and weatherproppfing brand</p>
+                  <p class="indent-40">Use weather proofing to weatherproof the house exterior</p>
+                  <p class="indent-40">OUTPUT weatherproofed house</p>
+                  <p class="indent-40">STOP</p>
+              </div>
+              <p>This function has some important elements:</p>
+              <ul>
+                  <li>A name for the function (weatherproof house)</li>
+                  <li>Inputs, in this case being the weatherproofing brand and the house exterior that is being weatherproofed</li>
+                  <li>Outputs, namely the weatherproofed house</li>
+                  <li>Last but not least, this function DOES something: it applies weatherproofing to the exterior of the house.</li>
+              </ul>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Calling Functions</h2>
+              <p>Now for something that's a little tricky about functions. You'd think that just writing it out would mean that the computer will actually do something with it. But since computers don't know what to do, you actually have to tell it explicitly to run the function! This is called <strong>calling a function.</strong> (Seems like css classes/ids)</p>
+              <p>Although, if you think about it, it actually makes sense! Just because I hand you a recipe it doesn't mean you're going to bake the cookies. But if I hand you a recipe and ORDER you to bake the cookies...</p>
+              <p>To run the function for building the house, you need to call it somewhere in your pseudocode. It could be a standalone like this:</p>
+              <div class="code">
+                  <p>RUN FUNCTION Weatherproof house WITH INPUTS House 1, aluminum, Bob's Allweather</p>
+                  <p>STOP</p>
+              </div>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Functions in Objects = Methods</h2>
+              <p>If you think about it, weatherproofing is one of those things that all houses really need. Since it's something that's required for a house, it almost sounds like it could be a <em>property</em> of a house!</p>
+              <p>In fact, functions can exist inside of objects. And when they do, they technically become properties! They also get a new name: <strong>methods</strong>. Methods work just like functions, only they are attached to ojects. In pseudocode, you could write that out as something like this:</p>
+              <div class="code">
+                <p>OBJECT House</p>
+                <p class="indent-40">PROPERTY exterior</p>
+                <p class="indent-40">PROPERTY paint color</p>
+                <p class="indent-40">PROPERTY roof</p>
+                <p class="indent-40">PROPERTY stories</p>
+                <p class="indent-40">PROPERTY bedrooms</p>
+                <p class="indent-40">PROPERTY bathrooms</p>
+                <p class="indent-40">PROPERTY other rooms</p>
+                <br><br>
+                <p class="indent-40">FUNCTION Weatherproof house</p>
+                <p class="indent-80">INPUT house exterior, and weatherproofing brand</p>
+                <p class="indent-80">Use weatherproofing to weatherproof the house exterior</p>
+                <p class="indent-80">OUTPUT weatherproofed house</p>
+                <p class="indent-40">STOP FUNCTION</p>
+              </div>
+              <p>The section of <strong>FUNCTION Weatherproof house</strong> is a <strong>method.</strong></p>
+              <p>Notice that <strong>Weatherproof house</strong> no longer uses <strong>House</strong> as an input - since it's part of the House object, it no longer needs it.</p>
+              <p>To run the method (a function (a mini algorithm) within an object), call it - and define the values you'd like to include as parameters! (Parameters are inputs in a function - inputs contain a value or variable that would contain a value.) In the example below, the exterior is aluminum and the weatherproofing brand.</p>
+              <div class="code">
+                  <p>RUN FUNCTION Weatherproof house with INPUTS aluminum, Bob's Allweather</p>
+              </div>
+            </div>
+        </section>
+
+        <section class="notes">
+            <div class="main-idea">
+              <h2>Recap!</h2>
+              <ul>
+                  <li>This is a lot of info! So let's sum it up:</li>
+                  <li>Functions (mini algorithms within bigger algorithms. When within an object, they are called Methods.) are a series of similar operations.</li>
+                  <li>A lot of times functions require inputs (called <strong>parameters</strong> when used within a function), and sometimes they have outputs as well.</li>
+                  <li>To use a function, you have to call it. You can eith call it on its own, or you can call it as part of another operation (like an if/else statement: if the house hasn't been weatherproofed, then weatherproof the house.)</li>
+                  <li>Functions can be a property of an object. When this is the case, they are called methods.</li>
+              </ul>
+              <p>Now that we've got the scoop on functions and methods, it's time for us to write one!</p>
+            </div>
+        </section>
+
+
 
 
 <!--- TEMPLATES -------->
